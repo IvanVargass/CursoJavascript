@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rest</title>
+</head>
+<body>
+    <script>
+
+        /* Parámetro REST se usa para cuando no se conoce un número
+           determinado de elementos */
+
+        const sumar = (a,b, ...c) => {
+            let suma = a + b;
+            c.forEach( (el) => {
+                suma += el;
+            });
+            return suma;
+        }
+
+        console.log(sumar(2,4,5,6));
+
+        /* Operador Spread se utiliza para añadir un número desconocido de elementos */
+
+        const arreglo_1 = [1,2,3,4,5],
+              arreglo_2 = [6,7,8,9,0];
+
+        const arreglo_3 = [...arreglo_1, ...arreglo_2];
+
+        console.log(arreglo_3);
+
+        /* Otra forma de concatenar valores */
+
+        const array1 = [1,2,3,4,5],
+              array2 = [6,7,8,9,10],
+              array3 = [11,12,13,14,15];
+              arrayFinal = array1.concat(array2,array3);
+        
+        console.log(arrayFinal);
+    </script>
+</body>
+</html>
