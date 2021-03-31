@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1</title>
+</head>
+<body>
+    <script>
+        const contarCaracteres = cadena => {
+            try{
+                // Verficamos si es un string
+                if(isNaN(cadena)){
+                    // Devuelve el numero de caracteres de una cadena
+                    return (`La cadena de texto tiene ${cadena.length} caracteres`);
+                } else {
+                    throw new Error('Debe ingresar una cadena de texto');
+                }
+            } catch(e){
+                return e;
+            }
+        }
+
+        let cantidad_caracteres = contarCaracteres("Hola Mundo");
+        console.log(cantidad_caracteres);
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3</title>
+</head>
+<body>
+    <script>
+        /* const devolverArray = (cadena, separador) => {
+            try{
+                if(isNaN()){
+                    return cadena.split(separador);
+                } else {
+                    throw new Error("Debe ingresar una cadena de texto");
+                }
+            } catch(e){
+                return e;
+            }
+        }
+
+        console.log(devolverArray("hola que tal", " ")); */
+
+        const devolverNVeces = (cadena, num) => {
+            try{
+                if(isNaN(cadena)){
+                    let nuevaCadena = cadena;
+                    for(let i = 0; i < num - 1; i++){
+                        nuevaCadena += " " + cadena;
+                    }
+                    return nuevaCadena;
+                } else {
+                    throw new Error("Debe ingresar una cadena de texto");
+                }
+            } catch{
+                return e;
+            }
+        }
+
+        console.log(devolverNVeces("Hola Mundo", 3));
+    </script>
+</body>
+</html>
